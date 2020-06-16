@@ -1,4 +1,4 @@
-/*@import
+﻿/*@import
   'vendors/normalize';*/
 /**
  * Set up a decent box model on the root element
@@ -189,6 +189,81 @@ a:visited {
     .page-footer li a:hover {
       color: #ffffff; }
 
+.vertical-icons {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .vertical-icons .divider {
+    flex: 1;
+    width: 1px;
+    border: 1px solid #91d3f2; }
+  .vertical-icons .circle-container {
+    background-color: #91d3f2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .vertical-icons .circle-container .circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #1896d2; }
+  .vertical-icons .icon-container {
+    background-color: #91d3f2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .vertical-icons .icon-container img {
+      width: 18px;
+      height: 18px; }
+
+.list-group .vertical-icons {
+  height: 70px !important; }
+  .list-group .vertical-icons .circle-container {
+    width: 23px;
+    height: 23px;
+    background: none !important; }
+    .list-group .vertical-icons .circle-container .circle {
+      width: 15px;
+      height: 15px; }
+  .list-group .vertical-icons .icon-container {
+    width: 23px;
+    height: 23px;
+    background: none !important; }
+    .list-group .vertical-icons .icon-container img {
+      width: 15px;
+      height: 15px; }
+
+.list-group .vertical-option-text {
+  flex: 1;
+  align-items: baseline; }
+  .list-group .vertical-option-text .divider {
+    border: none !important; }
+
+.list-group .icon {
+  margin-right: 15px; }
+
+.list-group .tick-mark {
+  color: #43a41a; }
+  .list-group .tick-mark i {
+    display: none; }
+
+.list-group .done i {
+  display: inline; }
+
+/*.fixed-side {
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    width: 350px;
+    z-index: -1;
+}*/
 .apply-section {
   background-color: #eaf5fa; }
   .apply-section .apply-content .apply-title {
@@ -295,8 +370,12 @@ a:visited {
       padding-left: 10px;
       padding-right: 15px; }
 
+@media (max-width: 576px) {
+  .transport-section .transport-btns {
+    display: none !important; } }
+
 .transport-section .transport-btns > * {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 .transport-section .transport-btns > *:not(:last-child) {
   margin-right: 20px; }
@@ -319,6 +398,9 @@ a:visited {
 
 .transport-section .person-form-container form {
   margin-left: 62px; }
+  @media (max-width: 576px) {
+    .transport-section .person-form-container form {
+      margin-left: 0; } }
 
 .transport-section .person-form-container .person-form-content .form-header {
   margin-bottom: 20px; }
@@ -359,40 +441,6 @@ a:visited {
       .transport-section .right-side .small-boxes .box.active {
         background-color: #1896d2;
         color: white; }
-
-.transport-section .address-data-content .vertical-icons {
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .transport-section .address-data-content .vertical-icons .divider {
-    flex: 1;
-    width: 1px;
-    border: 1px solid #91d3f2; }
-  .transport-section .address-data-content .vertical-icons .circle-container {
-    background-color: #91d3f2;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .transport-section .address-data-content .vertical-icons .circle-container .circle {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background-color: #1896d2; }
-  .transport-section .address-data-content .vertical-icons .icon-container {
-    background-color: #91d3f2;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .transport-section .address-data-content .vertical-icons .icon-container img {
-      width: 18px;
-      height: 18px; }
 
 .transport-section .address-data-content i.fa {
   color: #1896d2;
