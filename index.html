@@ -14,6 +14,7 @@
 
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="css/videojs.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link href="css/app.css" rel="stylesheet" />
 
@@ -24,7 +25,7 @@
     <nav class="navbar navbar-expand-md nav-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="images/group@2x.png" alt="Alternate Text" />
+                <img src="images/logo.png" class="logo" alt="Alternate Text" />
             </a>
             <a class="nav-link btn btn-primary d-flex d-md-none onsamll-phone" href="#"><img class="mr-2" src="images/icons/ion-ios-telephone-outline-ionicons.png" alt="Alternate Text" /> <span class="text-white">(050) 549 49 40</span></a>
 
@@ -118,7 +119,7 @@
                         <p class="step-text">
                             Vul uw adres in waar u op                              dit moment bent. Dan halen we u daar zo snel mogelijk                              u op.
                         </p>
-                       </div>
+                    </div>
 
 
                     <div class="col-sm-6 col-md-3  mb-3 mb-md-0">
@@ -202,10 +203,20 @@
                 </div>
 
                 <div class="video-container">
-                    <video controls>
-                        <source src="movie.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
+                    <video id="my-video"
+                           class="video-js vjs-default-skin vjs-big-play-centered "
+                           controls
+                           preload="auto"
+                           width="640"
+                           height="264"
+                           poster="images/taxi-poster.png"
+                           data-setup="{}">
+                        <source src="videos/taxi.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
                     </video>
                 </div>
             </div>
@@ -222,7 +233,11 @@
                             <div class="col-6 col-sm-6 col-lg-3 mb-3 m-md-0">
                                 <div class="price-container">
                                     <div class="img-container">
-                                        <img src="images/icons/ion-checkmark-round-ionicons@2x.png" alt="Alternate Text" />
+                                        <picture>
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons.png" media="(max-width:768px)" />
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons@2x.png" media="(min-width:768px)" />
+                                            <img src="images/icons/ion-checkmark-round-ionicons.png" alt="Alternate Text" />
+                                        </picture>
                                     </div>
                                     <span class="price-name">Klantgericht</span>
                                 </div>
@@ -230,7 +245,11 @@
                             <div class="col-6 col-sm-6 col-lg-3  mb-3 m-md-0">
                                 <div class="price-container">
                                     <div class="img-container">
-                                        <img src="images/icons/ion-checkmark-round-ionicons@2x.png" alt="Alternate Text" />
+                                        <picture>
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons.png" media="(max-width:768px)" />
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons@2x.png" media="(min-width:768px)" />
+                                            <img src="images/icons/ion-checkmark-round-ionicons.png" alt="Alternate Text" />
+                                        </picture>
                                     </div>
                                     <span class="price-name">Altijd bereikbaar</span>
                                 </div>
@@ -238,7 +257,11 @@
                             <div class="col-6 col-sm-6 col-lg-3  mb-3 m-sm-0">
                                 <div class="price-container">
                                     <div class="img-container">
-                                        <img src="images/icons/ion-checkmark-round-ionicons@2x.png" alt="Alternate Text" />
+                                        <picture>
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons.png" media="(max-width:768px)" />
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons@2x.png" media="(min-width:768px)" />
+                                            <img src="images/icons/ion-checkmark-round-ionicons.png" alt="Alternate Text" />
+                                        </picture>
                                     </div>
                                     <span class="price-name">Scherp geprijsd</span>
                                 </div>
@@ -246,7 +269,11 @@
                             <div class="col-6 col-sm-6 col-lg-3  mb-3 m-sm-0">
                                 <div class="price-container">
                                     <div class="img-container">
-                                        <img src="images/icons/ion-checkmark-round-ionicons@2x.png" alt="Alternate Text" />
+                                        <picture>
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons.png" media="(max-width:768px)" />
+                                            <source srcset="images/icons/ion-checkmark-round-ionicons@2x.png" media="(min-width:768px)" />
+                                            <img src="images/icons/ion-checkmark-round-ionicons.png" alt="Alternate Text" />
+                                        </picture>
                                     </div>
                                     <span class="price-name">Nette chauffeurs</span>
                                 </div>
@@ -255,7 +282,11 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-4  col-lg-3 justify-content-sm-center  d-flex justify-content-start align-items-center">
-                        <img src="images/icons/betaalmethodes@2x.png" class="img-fluid" alt="Alternate Text" />
+                        <picture>
+                            <source srcset="images/icons/betaalmethodes.png" media="(max-width:768px)" />
+                            <source srcset="images/icons/betaalmethodes@2x.png" media="(min-width:768px)" />
+                            <img src="images/icons/ion-checkmark-round-ionicons.png" class="img-fluid" alt="Alternate Text" />
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -268,7 +299,7 @@
             <div class="row">
                 <div class="col-sm-6 col-md-4">
                     <h5 class="font-weight-bold text-uppercase mt-3  mb-3 mb-sm-4">
-                        <img src="images/group@2x.png" alt="Alternate Text" />
+                        <img src="images/logo.png" class="logo" alt="Alternate Text" />
                     </h5>
                     <ul class="list-unstyled">
                         <li>
@@ -327,12 +358,13 @@
                         </li>
                     </ul>
                 </div>
-            </div>            
+            </div>
         </div>
     </footer>
     <!-- Footer -->
     <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/bootstrap.js"></script>
+    <script src="js/videojs.js"></script>
     <script src="js/app.js"></script>
 
 </body>
