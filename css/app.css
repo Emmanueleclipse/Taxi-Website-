@@ -1,4 +1,4 @@
-﻿/*@import
+/*@import
   'vendors/normalize';*/
 /**
  * Set up a decent box model on the root element
@@ -184,6 +184,8 @@ a:visited {
     margin-right: 10px; }
 
 .page-footer {
+  position: relative;
+  z-index: 10;
   background-color: #106086;
   color: #ffffff; }
   .page-footer .logo {
@@ -264,13 +266,32 @@ a:visited {
 .list-group .done i {
   display: inline; }
 
-/*.fixed-side {
-    position: fixed;
-    right: 10%;
-    top: 10%;
-    width: 350px;
-    z-index: -1;
-}*/
+.fixed {
+  position: fixed;
+  right: 10%;
+  top: 28px;
+  width: 350px;
+  z-index: 10; }
+  @media (max-width: 1310px) {
+    .fixed {
+      right: 8%; } }
+  @media (max-width: 1250px) {
+    .fixed {
+      right: 6%; } }
+  @media (max-width: 1130px) {
+    .fixed {
+      right: 3%; } }
+  @media (max-width: 1070px) {
+    .fixed {
+      right: 2%; } }
+  @media (max-width: 768px) {
+    .fixed {
+      position: initial;
+      width: 100%; } }
+
+.fixed-side .big-box {
+  background-color: white; }
+
 .apply-section {
   background-color: #eaf5fa; }
   .apply-section .apply-content .apply-title {
@@ -301,6 +322,10 @@ a:visited {
   @media (max-width: 576px) {
     .apply-section .apply-content .taxi-btn {
       width: 100%; } }
+  .apply-section .active {
+    color: #ffffff !important;
+    background-color: #1896d2;
+    border-color: transparent !important; }
 
 .services-section {
   background-image: url(../../images/schermafbeelding-2019-06-26-om-15-54-15@3x.png);
@@ -338,6 +363,8 @@ a:visited {
       height: 100%; }
 
 .price-section {
+  position: relative;
+  z-index: 10;
   background-color: #eaf5fa; }
   @media (max-width: 768px) {
     .price-section .container {
@@ -390,6 +417,10 @@ a:visited {
 
 .about-section .first-para {
   font-size: 19px; }
+
+.about-section .rustig-text {
+  font-size: 17px;
+  max-width: 46%; }
 
 .about-section .about-list li {
   font-size: 19px;
@@ -523,3 +554,31 @@ a:visited {
     .breadcrumb .breadcrumb-item::before {
       padding-left: 5px !important;
       padding-right: 5px !important; } }
+
+.animation-container {
+  position: relative; }
+  @media (max-width: 1150px) {
+    .animation-container {
+      display: none; } }
+  .animation-container .left-home {
+    position: absolute;
+    top: 13px;
+    left: 0; }
+  .animation-container .right-home {
+    position: absolute;
+    top: -43px;
+    right: 118px; }
+    @media (max-width: 1199px) {
+      .animation-container .right-home {
+        right: -60px !important; } }
+  .animation-container .car-svg {
+    position: absolute;
+    top: -260px;
+    left: -30px; }
+  .animation-container .line-svg {
+    transform: translateY(-45px); }
+    .animation-container .line-svg path {
+      transform: translateY(-190px);
+      stroke-dasharray: 4px;
+      stroke: #106086;
+      fill: none; }
